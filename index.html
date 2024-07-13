@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -34,10 +35,10 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-16 lg:me-40" id="nav-links">
-                    <a href="#" class="text-base font-semibold leading-6 text-gray-900 active">Home</a>
-                    <a href="#" class="text-base font-semibold leading-6 text-gray-900">About</a>
-                    <a href="#" class="text-base font-semibold leading-6 text-gray-900">Portifolio</a>
-                    <a href="#" class="text-base font-semibold leading-6 text-gray-900">Contact</a>
+                    <a href="/" class="text-base font-semibold leading-6 text-gray-900 active">Home</a>
+                    <a href="#about" class="text-base font-semibold leading-6 text-gray-900">About</a>
+                    <a href="#projects" class="text-base font-semibold leading-6 text-gray-900">Portifolio</a>
+                    <a href="#contact" class="text-base font-semibold leading-6 text-gray-900">Contact</a>
                     <a href="#" class="text-base font-semibold leading-6 text-gray-900">Blogs</a>
                 </div>
             </nav>
@@ -99,10 +100,11 @@
             <div class="flex items-center justify-center py-20 lg:py-24 flex-wrap lg:flex-nowrap">
                 <div
                     class="flex-auto flex flex-col items-center lg:items-start lg:flex-initial lg:w-fit z-10 order-2 lg:order-1">
-                    <div class="mb-2 lg:mb-6 flex mt-10 lg:mt-0">
+                    <div class="mb-2 md:mb-4 lg:mb-6 flex mt-10 lg:mt-0">
                         <div
                             class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-400 hover:ring-indigo-500">
-                            Announcing my latest project <a href="#" class="font-semibold text-indigo-600">
+                            Announcing my latest project <a href="#projects/medicalink"
+                                class="font-semibold text-indigo-600">
                                 <span class="absolute inset-0" aria-hidden="true">
                                 </span>MedicaLink<span aria-hidden="true">&rarr;</span></a>
                         </div>
@@ -117,7 +119,7 @@
                             apply my skills and knowledge to real-world projects and
                             challenges. I look forward to learning from and growing with the right team
                         </p>
-                        <div class="mt-5 lg:mt-10 flex justify-center lg:justify-start items-center gap-x-6">
+                        <div class="mt-5 md:mt-10 flex justify-center lg:justify-start items-center gap-x-6">
                             <a href="#"
                                 class="rounded-md flex items-center bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                 Download My CV
@@ -125,15 +127,16 @@
                                     download
                                 </span>
                             </a>
-                            <a href="#" class="hidden lg:inline text-sm font-semibold leading-6 text-gray-100">View my
+                            <a href="#projects"
+                                class="hidden md:inline text-sm font-semibold leading-6 text-gray-100">View my
                                 projects <span aria-hidden="true">→</span></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative flex-initial flex lg:w-fit order-1 lg:order-2 overflow-hidden">
-                    <div id="profile-circle"
-                        class="flex justify-center rounded-full bg-gradient-to-r from-indigo-800 via-purple-700 to-pink-700 w-[300px] h-[300px] lg:w-[550px] lg:h-[550px] overflow-hidden">
+                <div class="relative flex-initial flex lg:w-fit order-1 lg:order-2">
+                    <div id="profile-circle" class="flex justify-center rounded-full bg-gradient-to-r from-indigo-800 via-purple-700 to-pink-700 
+                        w-[280px] h-[280px] md:w-[360px] md:h-[360px] lg:w-[550px] lg:h-[550px] overflow-hidden">
                         <img class="h-[110%]" src="./assets/images/profile.png" />
 
                         <!-- Loading ring start -->
@@ -171,39 +174,27 @@
             </div>
 
             <!-- About me Start -->
-            <div class="py-14 lg:py-20 text-white md:px-8 lg:px-20">
-                <h1 class="text-4xl text-left font-bold">ABOUT ME</h1>
-                <div class="flex mx-auto lg:w-fit mt-10 justify-center">
-                    <div class="flex w-fit border-2 rounded-2xl flex-wrap lg:flex-nowrap overflow-hidden">
-                        <div class="flex-auto lg:w-fit">
-                            <img src="./assets/images//me/me1.JPG" alt="" class="lg:min-w-[600px]">
+            <div id="about" class="py-14 lg:py-20 text-white md:px-8 lg:px-20">
+                <h1 class="text-4xl text-center font-bold">ABOUT ME</h1>
+                <div class="flex mx-auto w-full lg:w-fit mt-10 justify-center">
+                    <div class="flex md:w-full lg:w-fit border-2 rounded-2xl flex-wrap lg:flex-nowrap overflow-hidden">
+                        <div class="flex-auto md:flex-1 lg:flex-auto lg:w-fit">
+                            <img src="./assets/images//me/me1.JPG" alt="" class="md:h-full lg:h-auto md:object-cover lg:object-contain lg:min-w-[600px]">
                         </div>
-                        <div class="flex-initial lg:w-fit">
+                        <div class="flex-initial md:flex-1 lg:flex-initial lg:w-fit">
                             <p class="lg:min-w-[600px] lg:max-w-[650px] p-5 lg:pl-10 lg:pt-12">
                                 <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consectetur magnam dignissimos odio quia amet temporibus tempora esse aliquid quis
-                                    facilis
-                                    cum eveniet eaque,
-                                    molestiae, incidunt minus tempore distinctio aspernatur expedita nam placeat.
-                                    Quibusdam,
-                                    voluptatibus earum!
-                                    Eligendi animi cupiditate modi exercitationem!
+                                    Hello! I'm Nisala Develigoda, an aspiring Software Engineer with a passion for solving real-world problems through technology.
+                                    I am currently a student at the University of West Minister, pursuing a Bachelors' degree in Software Engineering.
                                 </span>
-                                <span class="hidden lg:inline-block mt-2">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consectetur magnam dignissimos odio quia amet temporibus tempora esse aliquid quis
-                                    facilis
-                                    cum eveniet eaque,
-                                    molestiae, incidunt minus tempore distinctio aspernatur expedita nam placeat.
-                                    Quibusdam,
-                                    voluptatibus earum!
-                                    Eligendi animi cupiditate modi exercitationem!
+                                <span class="inline-block mt-4">
+                                    During my acedemic journey I have developed a strong foundation in various programming languages and frameworks, while also gaining
+                                    hands-on experience through projects, where I have honed my skills Web, Desktop and Mobile application development. Apart from that I have
+                                    gained a solid understanding of Database design, API development, OOP concepts and Design Patterns.
                                 </span>
-                                <span class="hidden lg:inline-block mt-2">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consectetur magnam dignissimos odio quia amet temporibus tempora esse aliquid quis
-                                    facilis cum eveniet eaque.
+                                <span class="inline-block mt-4">
+                                    I am a quick learner who thrives in collaborative environments and enjoys tackling complex challenges head-on.
+                                    My goal is to contribute to impactful technology solutions and continue growing as a developer.
                                 </span>
                             </p>
                         </div>
@@ -213,12 +204,12 @@
             <!-- About me End -->
 
             <!-- Projects Start -->
-            <div class="py-14 lg:py-20 text-white md:px-8 lg:px-20">
-                <h1 class="text-4xl text-right font-bold w-full">MY PROJECTS</h1>
+            <div id="projects" class="py-14 lg:py-20 text-white md:px-8 lg:px-20">
+                <h1 class="text-4xl text-center lg:mb-16 font-bold w-full">MY PROJECTS</h1>
 
-                <div class="flex project mt-20">
-                    <div class="flex-initial w-fit lg:max-w-[650px]">
-                        <h1 class="text-4xl font-semibold">MedicaLink - Online EHR System</h1>
+                <div class="flex project mt-10 lg:mt-32" id="medicalink">
+                    <!-- <div class="flex-initial w-fit lg:max-w-[650px]">
+                        <h1 class="text-4xl font-semibold">MedicaLink - <span class="text-3xl text-gray-50">Online EHR System</span></h1>
                         <div class="flex items-center gap-x-4 text-xs mt-3">
                             <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
                             <a href="#"
@@ -231,36 +222,87 @@
                             </a>
                         </div>
                         <p class="md:max-w-[600px] mt-6 lg:me-20">
-                        <p class="text-gray-200 text-justify md:pe-20">
-                            MedicaLink is an online electronic health information management platform.
-                            The longstanding use of paper-based healthcare systems in Sri Lanka has led to
-                            issues such as misdiagnoses and delayed patient care. MedicaLink aims to replace this
-                            paper-based system by centralizing healthcare information for hospitals across Sri Lanka
+                            <p class="text-gray-200 text-justify md:pe-20">
+                                MedicaLink is an online platform for managing electronic health records. It aims to replace
+                                Sri Lanka's paper-based healthcare systems,
+                                which often cause misdiagnoses and delays in patient care, by centralizing healthcare
+                                information for hospitals nationwide.
+                            </p>
+
+                            <div>
+                                <h2 class="font-semibold mt-4">Technologies Used</h2>
+                                <p class="text-gray-300">
+                                    React, React Native, ASP .NET Core, MYSQL as the main tech stack.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-semibold mt-4">My Role</h2>
+                                <p class="text-gray-300">
+                                    Lead developer
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-semibold mt-4">Awards and Recognitions</h2>
+                                <p class="text-gray-300">
+                                    Won 1<sup>st</sup> place at the IIT Infoshco Induction program Demo Day 2024 <br>
+                                    Selected for the final round of IIT Cutting-Edge - Ideathon 2021
+                                </p>
+                            </div>
                         </p>
+                    </div> -->
 
-                        <div>
-                            <h2 class="font-semibold mt-4">Technologies Used</h2>
-                            <p class="text-gray-300">
-                                React, ASP .NET Core, MYSQL as the main tech stack.
+                    <div class="flex-initial w-fit lg:max-w-[650px]">
+                        <div class="bg-indigo-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                            <h1 class="text-4xl font-semibold">MedicaLink
+                                <span class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                                    <span class="hidden md:inline"> - </span>Online EHR System
+                                </span>
+                            </h1>
+                            <div class="flex items-center gap-x-4 text-xs mt-3">
+                                <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                                <a href="#"
+                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Web App<span class="hidden md:inline">lication</span>
+                                </a>
+                                <a href="#"
+                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Mobile
+                                </a>
+                            </div>
+                            <p class="md:max-w-[600px] mt-6 lg:me-20">
+                            <p class="text-gray-50 text-justify md:pe-20">
+                                MedicaLink is an online platform for managing electronic health records. It aims to
+                                replace
+                                Sri Lanka's paper-based healthcare systems,
+                                which often cause misdiagnoses and delays in patient care, by centralizing healthcare
+                                information for hospitals nationwide.
+                            </p>
+
+                            <div>
+                                <h2 class="font-bold mt-4">Technologies Used</h2>
+                                <p class="text-gray-50">
+                                    React, React Native, ASP .NET Core, MYSQL as the main tech stack.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-bold mt-4">My Role</h2>
+                                <p class="text-gray-50">
+                                    Lead developer
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-semibold mt-4">Awards and Recognitions</h2>
+                                <p class="text-gray-300">
+                                    Won 1<sup>st</sup> place at the IIT Infoshco Induction program Demo Day 2024 <br>
+                                    Selected for the final round of IIT Cutting-Edge - Ideathon 2021
+                                </p>
+                            </div>
                             </p>
                         </div>
-
-                        <div>
-                            <h2 class="font-semibold mt-4">My Role</h2>
-                            <p class="text-gray-300">
-                                As the lead developer of the project I managed the backend, frontend and <br>
-                                the intergration of the two.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h2 class="font-semibold mt-4">Awards and Recognitions</h2>
-                            <p class="text-gray-300">
-                                Won 1<sup>st</sup> place at the IIT Infoshco Induction program Demo Day 2024 <br>
-                                Selected for the final round of IIT Cutting-Edge 2021
-                            </p>
-                        </div>
-                        </p>
                     </div>
 
                     <div class="flex-initial w-fit relative">
@@ -300,7 +342,7 @@
                     </div>
                 </div>
 
-                <div class="flex justify-end project mt-40">
+                <div class="flex justify-end mt-16 project lg:mt-40">
 
                     <div class="flex-initial w-fit">
                         <div class="hidden lg:flex lg:max-w-[600px] project-content project-right">
@@ -333,47 +375,84 @@
                     </div>
 
                     <div class="flex-initial w-fit lg:max-w-[650px] text-end">
-                        <h1 class="text-4xl font-semibold">VTA CMS - Centre Management System</h1>
-                        <div class="flex items-center justify-end gap-x-4 text-xs mt-3">
-                            <a href="#"
-                                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                                Web Application
-                            </a>
-                            <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                        <div class="bg-pink-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                            <h1 class="text-4xl font-semibold ">VTA CMS<span class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                                <span class="hidden md:inline"> - </span>Centre Management System</span></h1>
+                            <div class="flex items-center justify-end gap-x-4 text-xs mt-3">
+                                <a href="#"
+                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Web Application
+                                </a>
+                                <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                            </div>
+                            <p class="max-w-[600px] ms-auto mt-6 lg:ms-20">
+                            <p class="text-gray-50 text-justify md:ps-16">
+                                A center management system for the Vocational Training Authority of Sri Lanka. It
+                                manages
+                                student registration,
+                                Attendance marking, Assessment handling and Inventory handling of centres owned by the
+                                VTA.
+                            </p>
+
+                            <div>
+                                <h2 class="font-bold mt-4">Technologies Used</h2>
+                                <p class="text-gray-50 md:ps-16">
+                                    A hand-built PHP framework and custom javascript to implement single page
+                                    functionality.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-semibold mt-4">My Role</h2>
+                                <p class="text-gray-50">
+                                    Project Lead | Developer
+                                </p>
+                            </div>
+                            </p>
                         </div>
-                        <p class="max-w-[600px] ms-auto mt-6 lg:ms-20">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Dolor eaque debitis hic voluptates quisquam illo minus, atque mollitia iusto deserunt
-                            beatae
-                            error vel
-                            reiciendis perferendis velit eius facere harum corrupti commodi architecto accusantium
-                            ullam? Eaque, maiores
-                            enim soluta ab incidunt, sunt mollitia sit corporis sed, architecto culpa vel magnam
-                            eos?
-                        </p>
                     </div>
                 </div>
 
-                <div class="flex project mt-40">
+                <div class="flex project mt-16 lg:mt-40">
                     <div class="flex-initial w-fit lg:max-w-[650px]">
-                        <h1 class="text-4xl font-semibold">Skill-Force Student Application System</h1>
-                        <div class="flex items-center gap-x-4 text-xs mt-3">
-                            <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
-                            <a href="#"
-                                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                                Desktop Application
-                            </a>
+                        <div class="bg-yellow-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                            <h1 class="text-4xl font-semibold">Skill-Force App
+                                <span class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                                    <span class="hidden md:inline"> - </span>Student Application System
+                                </span>
+                            </h1>
+                            <div class="flex items-center gap-x-4 text-xs mt-3">
+                                <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                                <a href="#"
+                                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                    Desktop Application
+                                </a>
+                            </div>
+                            <p class="max-w-[600px] mt-6 lg:me-20">
+                            <p class="text-gray-50 text-justify md:pe-20">
+                                A student application management system for the Vocation Training Authority of Sri
+                                Lanka.
+                                It is used to manage application submitted by students for VTA courses. Completed the
+                                whole
+                                project in
+                                a week.
+                            </p>
+
+                            <div>
+                                <h2 class="font-bold mt-4">Technologies Used</h2>
+                                <p class="text-gray-50">
+                                    Java/Java Swing, Google Spreadsheets, Spreadsheets API, Firebase.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 class="font-bold mt-4">My Role</h2>
+                                <p class="text-gray-50">
+                                    Project Lead | Developer
+                                </p>
+                            </div>
+                            </p>
                         </div>
-                        <p class="max-w-[600px] mt-6 lg:me-20">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Dolor eaque debitis hic voluptates quisquam illo minus, atque mollitia iusto deserunt
-                            beatae
-                            error vel
-                            reiciendis perferendis velit eius facere harum corrupti commodi architecto accusantium
-                            ullam? Eaque, maiores
-                            enim soluta ab incidunt, sunt mollitia sit corporis sed, architecto culpa vel magnam
-                            eos?
-                        </p>
                     </div>
 
                     <div class="flex-initial w-fit">
@@ -399,6 +478,99 @@
 
             </div>
             <!-- Projects End -->
+
+            <!-- Contact me Start -->
+            <div id="contact" class="py-14 lg:py-20 text-white md:px-8 lg:px-20">
+                <h1 class="text-4xl text-center font-bold">CONTACT ME</h1>
+                <div class="flex mx-auto lg:w-fit mt-10 justify-center">
+                    <div class="flex w-fit border-2 rounded-2xl flex-wrap lg:flex-nowrap overflow-hidden">
+                        <div class="flex-auto flex bg-indigo-700 py-8 px-5 md:py-12 md:px-8 lg:px-16 justify-center flex-col overflow-x-hidden gap-y-6 md:gap-y-8 w-full lg:w-fit">
+
+                            <div class="contact flex text-[18px] md:text-2xl items-center">
+                                <div class="rounded-full border-2 border-white px-3 py-2">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <h3 class="ms-5 lg:ms-10">+94701804127</h3>
+                            </div>
+                            <div class="contact flex text-[18px] md:text-2xl items-center">
+                                <div class="rounded-full border-2 border-white px-3 py-2">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <h3 class="ms-5 lg:ms-10 break-words max-w-[220px] md:max-w-none">
+                                    dulanakanisala654@gmail.com</h3>
+                            </div>
+                            <div class="contact flex text-[18px] md:text-2xl items-center">
+                                <div class="rounded-full border-2 border-white px-3 py-2">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <h3 class="ms-5 lg:ms-10">www.linkedin.com/in/nisala-develigoda</h3>
+                            </div>
+
+                        </div>
+                        <div class="flex-initial w-full lg:w-fit">
+                            <div class="lg:min-w-[600px] lg:max-w-[650px] p-5 md:py-12 lg:py-20 md:px-10 lg:px-16">
+                                <h2 class="text-white text-3xl font-semibold mb-6 lg:mb-14 text-center">Drop a Message
+                                </h2>
+                                <form class="shadow-md">
+                                    <div class="mb-4">
+                                        <label class="block text-white text-sm font-bold mb-2" for="username">
+                                            Email
+                                        </label>
+                                        <input
+                                            class="appearance-none border border-white rounded w-full py-2 px-3 bg-transparent text-white leading-tight focus:border-[#694ec3] focus:outline-none focus:shadow-outline"
+                                            id="username" type="text" placeholder="someuser@example.com">
+                                    </div>
+                                    <div class="mb-6">
+                                        <label class="block text-white text-sm font-bold mb-2" for="message">
+                                            Message
+                                        </label>
+                                        <textarea id="message"
+                                            class="appearance-none border border-white rounded w-full py-2 px-3 bg-transparent min-h-20 text-white mb-3 leading-tight focus:border-[#694ec3] focus:outline-none focus:shadow-outline"
+                                            placeholder="Hey there! ...."></textarea>
+                                        <p class="hidden text-red-500 text-xs italic">Please choose a password.</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <button
+                                            class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                            type="button">
+                                            Send <i class="bi bi-send"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact me End -->
+
+            <footer>
+                <div class="mt-10 py-10 md:px-8 lg:px-10">
+                    <div class="flex text-white mb-8">
+                        <div class="flex-1">
+                            <h2 class="text-4xl">Thank you for visiting!</h2>
+                            <p class="mt-5">
+                                If you are a fellow Developer or Tech enthusiast, please feel free to
+                                contact me on social media or drop a connection on linkedin. I'm open to
+                                new opportunities and collaborations.
+                            </p>
+                        </div>
+                        <div class="flex-1 hidden lg:block">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flex py-5">
+                        <h2 class="text-[14px] text-gray-200">© 2024 Nisala Develigoda, Inc. All rights reserved.</h2>
+
+                        <div class="ms-auto flex text-[18px] gap-x-2 lg:gap-x-6 text-gray-200 hover:text-white">
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-discord"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 
