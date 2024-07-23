@@ -6,61 +6,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .lds-ring,
-        .lds-ring div {
-            box-sizing: border-box;
-        }
 
-        .lds-ring {
-            display: inline-block;
-            position: relative;
-            width: 80px;
-            height: 80px;
-            background-color: red;
-        }
-
-        .lds-ring div {
-            box-sizing: border-box;
-            display: block;
-            position: absolute;
-            width: 64px;
-            height: 64px;
-            margin: 8px;
-            border: 8px solid currentColor;
-            border-radius: 50%;
-            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            border-color: transparent currentColor transparent transparent;
-        }
-
-        .lds-ring div:nth-child(1) {
-            animation-delay: -0.45s;
-        }
-
-        .lds-ring div:nth-child(2) {
-            animation-delay: -0.3s;
-        }
-
-        .lds-ring div:nth-child(3) {
-            animation-delay: -0.15s;
-        }
-
-        @keyframes lds-ring {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="flex project mt-10 lg:mt-32" id="medicalink">
+
+            <div class="flex-initial w-fit lg:max-w-[650px]">
+                <div class="bg-indigo-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                    <h1 class="text-4xl font-semibold">MedicaLink
+                        <span class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                            <span class="hidden md:inline"> - </span>Online EHR System
+                        </span>
+                    </h1>
+                    <div class="flex items-center gap-x-4 text-xs mt-3">
+                        <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                            Web App<span class="hidden md:inline">lication</span>
+                        </a>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                            Mobile
+                        </a>
+                    </div>
+                    <p class="md:max-w-[600px] mt-6 lg:me-20">
+                    <p class="text-gray-50 text-justify md:pe-20">
+                        MedicaLink is an online platform for managing electronic health records. It aims to
+                        replace
+                        Sri Lanka's paper-based healthcare systems,
+                        which often cause misdiagnoses and delays in patient care, by centralizing healthcare
+                        information for hospitals nationwide.
+                    </p>
+
+                    <div>
+                        <h2 class="font-bold mt-4">Technologies Used</h2>
+                        <p class="text-gray-50">
+                            React, React Native, ASP .NET Core, MYSQL as the main tech stack.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="font-bold mt-4">My Role</h2>
+                        <p class="text-gray-50">
+                            Lead developer
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="font-semibold mt-4">Awards and Recognitions</h2>
+                        <p class="text-gray-300">
+                            Won 1<sup>st</sup> place at the IIT Infoshco Induction program Demo Day 2024 <br>
+                            Selected for the final round of IIT Cutting-Edge - Ideathon 2021
+                        </p>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-initial w-fit relative">
+                <div class="hidden lg:flex lg:max-w-[600px] project-content">
+                    <div class="content bg-blue-400">
+                        <img src="./assets/images/projects/medicalink/1.png" alt="project-image"
+                            class="shadow-md translate-y-[10%]">
+                        <img src="./assets/images/projects/medicalink/1.png" alt="project-image"
+                            class="mt-2 shadow-md translate-y-[10%]">
+                    </div>
+                    <div class="content main bg-gray-900">
+                        <div class="video overflow-hidden h-[100%]">
+                            <video muted id="myvid">
+                                <source src="./assets/final exhi.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="main-content px-5">
+                            <div class="mc">
+                                <img src="./assets/images/projects/medicalink/h3.png" alt="">
+                            </div>
+                            <div class="mc">
+                                <img src="./assets/images/projects/medicalink/h2.png" alt="">
+                            </div>
+                            <div class="mc">
+                                <img src="./assets/images/projects/medicalink/h1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content bg-blue-400">
+                        <img src="./assets/images/projects/medicalink/1.png" alt="project-image"
+                            class="shadow-md translate-y-[-50%]">
+                        <img src="./assets/images/projects/medicalink/1.png" alt="project-image"
+                            class="mt-2 shadow-md translate-y-[-50%]">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end mt-16 project lg:mt-40" id="classroom-cms">
+
+            <div class="flex-initial w-fit">
+                <div class="hidden lg:flex lg:max-w-[600px] project-content project-right">
+                    <div class="content bg-red-400">
+                        <img src="./assets/images/projects/cms/1.png" alt="project-image"
+                            class="shadow-md translate-y-[0%]">
+                        <img src="./assets/images/projects/cms/3.png" alt="project-image"
+                            class="mt-2 shadow-md translate-y-[2%]">
+                    </div>
+                    <div class="content main bg-red-400">
+                        <div class="main-content px-5">
+                            <div class="mc bg-red-500">
+                                <img src="./assets/images/projects/medicalink/h3.png" alt="">
+                            </div>
+                            <div class="mc bg-indigo-600">
+                                <img src="./assets/images/projects/medicalink/h2.png" alt="">
+                            </div>
+                            <div class="mc bg-gray-700">
+                                <img src="./assets/images/projects/medicalink/h1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content bg-red-400">
+                        <img src="./assets/images/projects/cms/2.png" alt="project-image"
+                            class="shadow-md translate-y-[-10%]">
+                        <img src="./assets/images/projects/cms/1.png" alt="project-image"
+                            class="mt-2 shadow-md translate-y-[-10%]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-initial w-fit lg:max-w-[650px] text-end">
+                <div class="bg-pink-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                    <h1 class="text-4xl font-semibold ">VTA CMS<span
+                            class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                            <span class="hidden md:inline"> - </span>Centre Management System</span></h1>
+                    <div class="flex items-center justify-end gap-x-4 text-xs mt-3">
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                            Web Application
+                        </a>
+                        <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                    </div>
+                    <p class="max-w-[600px] ms-auto mt-6 lg:ms-20">
+                    <p class="text-gray-50 text-justify md:ps-16">
+                        A center management system for the Vocational Training Authority of Sri Lanka. It
+                        manages
+                        student registration,
+                        Attendance marking, Assessment handling and Inventory handling of centres owned by the
+                        VTA.
+                    </p>
+
+                    <div>
+                        <h2 class="font-bold mt-4">Technologies Used</h2>
+                        <p class="text-gray-50 md:ps-16">
+                            A hand-built PHP framework and custom javascript to implement single page
+                            functionality.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="font-semibold mt-4">My Role</h2>
+                        <p class="text-gray-50">
+                            Project Lead | Developer
+                        </p>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex project mt-16 lg:mt-40" id="skill-force">
+            <div class="flex-initial w-fit lg:max-w-[650px]">
+                <div class="bg-yellow-600 rounded-[1.05rem] px-8 pt-8 pb-16">
+                    <h1 class="text-4xl font-semibold">Skill-Force App
+                        <span class="block md:inline text-[18px] md:text-3xl text-gray-50">
+                            <span class="hidden md:inline"> - </span>Student Application System
+                        </span>
+                    </h1>
+                    <div class="flex items-center gap-x-4 text-xs mt-3">
+                        <time datetime="2024-06-20" class="text-gray-200 text-[14px]">June 20, 2024</time>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                            Desktop Application
+                        </a>
+                    </div>
+                    <p class="max-w-[600px] mt-6 lg:me-20">
+                    <p class="text-gray-50 text-justify md:pe-20">
+                        A student application management system for the Vocation Training Authority of Sri
+                        Lanka.
+                        It is used to manage application submitted by students for VTA courses. Completed the
+                        whole
+                        project in
+                        a week.
+                    </p>
+
+                    <div>
+                        <h2 class="font-bold mt-4">Technologies Used</h2>
+                        <p class="text-gray-50">
+                            Java/Java Swing, Google Spreadsheets, Spreadsheets API, Firebase.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="font-bold mt-4">My Role</h2>
+                        <p class="text-gray-50">
+                            Project Lead | Developer
+                        </p>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-initial w-fit">
+                <div class="hidden lg:flex lg:max-w-[600px] project-content">
+                    <div class="content bg-yellow-400"></div>
+                    <div class="content main bg-yellow-400">
+                        <div class="main-content px-5">
+                            <div class="mc bg-red-500">
+                                <img src="./assets/images/projects/medicalink/h3.png" alt="">
+                            </div>
+                            <div class="mc bg-indigo-600">
+                                <img src="./assets/images/projects/medicalink/h2.png" alt="">
+                            </div>
+                            <div class="mc bg-gray-700">
+                                <img src="./assets/images/projects/medicalink/h1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content bg-yellow-400"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
