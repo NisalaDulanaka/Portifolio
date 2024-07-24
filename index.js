@@ -88,14 +88,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = document.querySelectorAll('#projects .project');
 
     let overviewInUse = false, firstTime = true;
+    let activeProject = null;
     for (const project of projects) {
 
         project.addEventListener('click', e => {
             overviewInUse = true;
+
             if(! projectOverviewContainer.classList.contains('show')){
                 projectOverviewContainer.classList.add('show');
             }
+
+            if(activeProject != null) activeProject.classList.remove('active');
             project.classList.add('active');
+            activeProject = project;
+            
             setTimeout(() => {
                 projectOverviewContainer.classList.add('content');
             }, 500);
@@ -103,11 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
             projectContainer.scrollIntoView();
         });
 
-        project.addEventListener('focusout', e => {
+        document.getElementById('overview-close').addEventListener('click', e => {
             projectOverviewContainer.classList.remove('content');
             setTimeout(() => {
-                project.classList.remove('active');
-
+                activeProject.classList.remove('active');
                 if(!overviewInUse || firstTime){
                     projectOverviewContainer.classList.remove('show');
                 }
@@ -115,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 overviewInUse = false;
                 firstTime = false;
             }, 500);
-        })
+        });
     }
 });
 
