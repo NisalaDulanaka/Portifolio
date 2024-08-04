@@ -1,46 +1,6 @@
+let projectOverviewContent = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Project cards animation
-    const rightAlignedContents = document.querySelectorAll(".project-content.project-right .content");
-    const contents = document.querySelectorAll('.project-content .content');
-
-    for (const content of contents) {
-        let enterTime = 80;
-        let leaveTime = 290;
-        
-        for (const rac of rightAlignedContents) {
-            if (content === rac) {
-                enterTime = 150;
-                leaveTime = 250;
-                break;
-            }
-        }
-
-        content.addEventListener("mouseenter", () => {
-            setTimeout(() => {
-                content.classList.add('content-top');
-            }, enterTime); // Delay before showing box2 and changing z-index
-        });
-
-        content.addEventListener("mouseleave", () => {
-            setTimeout(() => {
-                content.classList.remove('content-top');
-            }, leaveTime); // Delay before showing box2 and changing z-index
-        });
-    }
-
-    const projectVideos = document.querySelectorAll('.project .video video');
-    for (const video of projectVideos) {
-        video.addEventListener("mouseenter",(e) => {
-            e.target.play();
-        });
-    
-        video.addEventListener("mouseleave",(e) => {
-            e.target.pause();
-            e.target.currentTime = 0;
-        });
-    }
-
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -83,16 +43,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //Project animations
+    projectOverviewContent = document.getElementById('overview-content');
+
     const projectContainer = document.getElementById('projects');
     const projectOverviewContainer = document.querySelector('#projects .overview-container');
     const projects = document.querySelectorAll('#projects .project');
 
     let overviewInUse = false, firstTime = true;
     let activeProject = null;
-    for (const project of projects) {
+    let currentTimeOut = null;
+
+    document.getElementById('overview-close').addEventListener('click', e => {
+        projectOverviewContainer.classList.remove('content');
+
+        clearTimeout(currentTimeOut);
+        currentTimeOut = setTimeout(() => {
+            activeProject.classList.remove('active');
+            
+            projectOverviewContainer.classList.remove('show');
+            projectOverviewContent.innerHTML = '';
+
+            overviewInUse = false;
+            firstTime = false;
+        }, 500);
+    });
+
+    for (let i =0; i < projects.length; i++) {
+        const project = projects[i];
 
         project.addEventListener('click', e => {
-            overviewInUse = true;
+            overviewInUse = false;
 
             if(! projectOverviewContainer.classList.contains('show')){
                 projectOverviewContainer.classList.add('show');
@@ -100,28 +80,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if(activeProject != null) activeProject.classList.remove('active');
             project.classList.add('active');
+            projectOverviewContent.innerHTML = projectData[i].getContent();
             activeProject = project;
             
-            setTimeout(() => {
-                projectOverviewContainer.classList.add('content');
-            }, 500);
+            if(!overviewInUse || firstTime){
+                projectOverviewContainer.classList.remove('content');
+                setTimeout(() => {
+                    projectOverviewContainer.classList.add('content');
+                }, 500);
+            }
+            
             project.focus();
             projectContainer.scrollIntoView();
-        });
 
-        document.getElementById('overview-close').addEventListener('click', e => {
-            projectOverviewContainer.classList.remove('content');
-            setTimeout(() => {
-                activeProject.classList.remove('active');
-                if(!overviewInUse || firstTime){
-                    projectOverviewContainer.classList.remove('show');
-                }
-
-                overviewInUse = false;
-                firstTime = false;
-            }, 500);
+            overviewInUse = true;
+            firstTime = false;
         });
     }
+
+    //Project fullscreen swiper
+    const swiperContainer = document.getElementById('project-swiper-wrapper');
+    document.getElementById('overview-fullScreen').addEventListener('click', e => {
+        console.log('happening');
+        swiperContainer.classList.remove('hidden');
+    });
+
+    document.getElementById('fullscreen-close').addEventListener('click', e => {
+        console.log('happening');
+        swiperContainer.classList.add('hidden');
+    });
+
+    const swiper = new Swiper('#project-swiper', {
+        speed: 400,
+        spaceBetween: 100,
+        /* autoplay: {
+            delay: 5000,
+        }, */
+        pagination: {
+            el: ".swiper-pagination",
+        }
+    });
+
+    document.querySelector('#project-swiper-container .swiper-button-prev').addEventListener('click', e => {
+        swiper.slidePrev();
+    });
+
+    document.querySelector('#project-swiper-container .swiper-button-next').addEventListener('click', e => {
+        swiper.slideNext();
+    });
 });
 
 function getElementFromIdLink(idLink = ""){
