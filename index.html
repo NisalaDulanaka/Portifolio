@@ -129,25 +129,53 @@
         <div class="sticky top-0 h-[100vh] px-5 py-5">
             <div class="h-full rounded-xl overflow-hidden grid gap-2 grid-cols-[repeat(20,minmax(0,_1fr))] grid-rows-12 [&>.slide]:relative [&>.slide]:rounded-3xl [&>.slide]:overflow-hidden" id="project-main">
                 
-                <div class="slide bg-indigo-500 col-span-12 row-span-full">
-                    <img src="./assets/images/projects/medicalink/main.png" 
-                    class="object-top" alt="project-asset">
+                <div class="slide bg-gray-800 col-span-12 row-span-full">
+                    
+                    <div class="swiper h-full" id="swiper-test">
 
-                    <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col">
-                        <div class="ms-8 mb-5 mt-auto">
-                            <span class="material-symbols-outlined cursor-pointer">
+                        <div class="swiper-wrapper h-full">
+
+                            <div class="swiper-slide">
+                                <img src="./assets/images/projects/medicalink/main.png" 
+                                class="object-cover object-top" alt="project-asset">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./assets/images/projects/medicalink/design (2).png" 
+                                class="object-contain" alt="project-asset">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10">
+                        <div class="ms-8 mb-5 mt-auto flex items-center" id="swiper-test-controls">
+                            <span class="material-symbols-outlined cursor-pointer prev">
                                 arrow_back_ios
                             </span>
-                            <span class="material-symbols-outlined cursor-pointer">
+                            <span class="material-symbols-outlined cursor-pointer next">
                                 arrow_forward_ios
                             </span>
+                            <div class="ms-2 flex items-center anime text-yellow-400">
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="ms-5">Explore</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="slide bg-orange-500 col-span-4 row-span-8">
                     <img src="https://images.theconversation.com/files/373616/original/file-20201208-23-18tgbmo.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C667%2C667&q=45&auto=format&w=240&h=240&fit=crop"
-                    class="object-top" alt="project-asset">
+                    class="object-cover object-top" alt="project-asset">
 
                     <div class="absolute h-full w-full top-0 left-0 bg-[#303cdf86] p-4 text-white flex flex-col">
                         <h1 class="text-2xl">01</h1>

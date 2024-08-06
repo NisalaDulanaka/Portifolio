@@ -128,6 +128,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#project-swiper-container .swiper-button-next').addEventListener('click', e => {
         swiper.slideNext();
     });
+
+    const testSwiper = new Swiper('#swiper-test', {
+        speed: 400,
+        spaceBetween: 100,
+    });
+
+    document.querySelector('#swiper-test-controls .prev').addEventListener('click', e => {
+        testSwiper.slidePrev();
+    });
+
+    document.querySelector('#swiper-test-controls .next').addEventListener('click', e => {
+        testSwiper.slideNext();
+    });
 });
 
 function getElementFromIdLink(idLink = ""){
