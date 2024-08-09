@@ -270,10 +270,19 @@
     backdrop-filter: blur(5px);
 }
 
+#project-overview-container .grid{
+    transition: transform 0.5s ease;
+    transform: scale(0);
+}
+
+#project-overview-container.show .grid{
+    transform: scale(1);
+}
+
 /* Set the active project styles only from middle sreen onwards */
 @media (min-width: 768px) {
 
-    .project.active .card{
+    /* .project.active .card{
         transform: scale(1.05);
     }
 
@@ -297,65 +306,9 @@
         transform: scaleY(1);
         transition: transform 0.5s ease;
         cursor: default;
-    }
+    } */
 }
 
-.project .section::-webkit-scrollbar{
-    width: 0.5rem /* 8px */;
-}
-
-#projects .overview-body::-webkit-scrollbar{ height: 0.65rem; }
-
-.project .section::-webkit-scrollbar-track:vertical, #projects .overview-body::-webkit-scrollbar-track{
-    width: 0.5rem /* 8px */;
-    background-color: rgb(83, 83, 76);
-}
-
-.project .section::-webkit-scrollbar-thumb:vertical, #projects .overview-body::-webkit-scrollbar-thumb{
-    width: 0.5rem /* 8px */;
-    background-color: #b8bbca;
-    border-radius: 0.5rem;
-}
-
-#projects .overview-container{
-    height: 0px;
-    transform-origin: top;
-    transition: height 0.5s ease;
-}
-
-#projects .overview-container.show{
-    height: 560px;
-}
-
-.overview-container .overivew-content{
-    height: 0px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-}
-
-.overview-container.show .overivew-content{
-    height: 500px;
-}
-
-.overview-container.show.content .overivew-content{
-    transform: scaleX(1);
-}
-
-.overview-tiles .tile{
-    border-radius: 0.375rem;
-    overflow: hidden;
-}
-
-.overivew-content .tile video{
-    width: 100%;
-}
-
-.overivew-content .tile img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
 
 /* Project swiper start */
 #project-swiper .swiper-slide{
@@ -383,10 +336,8 @@
 
 /* Project swiper end */
 
-/* Project content end */
-
 /* Project main start */
-#project-main .slide img{
+.project-main .slide img{
     width: 100% !important;
     height: 100%;
 }
@@ -406,6 +357,7 @@
 }
 
 #swiper-test-controls .anime span:nth-child(4){
+    animation-duration: 1.05s;
     animation-delay: 0.25s;
     font-size: 16px;
     font-weight: normal;

@@ -43,105 +43,54 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //Project animations
-    projectOverviewContent = document.getElementById('overview-content');
-
-    const projectContainer = document.getElementById('projects');
-    const projectOverviewContainer = document.querySelector('#projects .overview-container');
+    const projectOverviewContainer = document.querySelector('#project-overview-container');
+    const projectContainerMain = projectOverviewContainer.querySelector('.project-main');
+    const projectOverviewCloseBtn = projectOverviewContainer.querySelector('.close');
     const projects = document.querySelectorAll('#projects .project');
-
-    let overviewInUse = false, firstTime = true;
-    let activeProject = null;
-    let currentTimeOut = null;
-
-    document.getElementById('overview-close').addEventListener('click', e => {
-        projectOverviewContainer.classList.remove('content');
-
-        clearTimeout(currentTimeOut);
-        currentTimeOut = setTimeout(() => {
-            activeProject.classList.remove('active');
-            
-            projectOverviewContainer.classList.remove('show');
-            projectOverviewContent.innerHTML = '';
-
-            overviewInUse = false;
-            firstTime = false;
-        }, 500);
-    });
 
     for (let i =0; i < projects.length; i++) {
         const project = projects[i];
+        const projectData = projectsData[i];
 
         project.addEventListener('click', e => {
-            overviewInUse = false;
 
-            if(! projectOverviewContainer.classList.contains('show')){
+            projectContainerMain.innerHTML = projectData.getContent();
+
+            projectOverviewContainer.classList.remove('hidden');
+            projectSwiperInit();
+            
+            setTimeout(() => {
                 projectOverviewContainer.classList.add('show');
-            }
-
-            if(activeProject != null) activeProject.classList.remove('active');
-            project.classList.add('active');
-            projectOverviewContent.innerHTML = projectData[i].getContent();
-            activeProject = project;
-            
-            if(!overviewInUse || firstTime){
-                projectOverviewContainer.classList.remove('content');
-                setTimeout(() => {
-                    projectOverviewContainer.classList.add('content');
-                }, 500);
-            }
-            
-            project.focus();
-            projectContainer.scrollIntoView();
-
-            overviewInUse = true;
-            firstTime = false;
+            }, 50);
         });
     }
 
+    projectOverviewCloseBtn.addEventListener('click', e => {
+        projectOverviewContainer.classList.remove('show');
+        setTimeout(() => {
+            projectOverviewContainer.classList.add('hidden');
+            projectContainerMain.innerHTML = '';
+        }, 400);
+    });
+
     //Project fullscreen swiper
-    const swiperContainer = document.getElementById('project-swiper-wrapper');
-    document.getElementById('overview-fullScreen').addEventListener('click', e => {
-        console.log('happening');
-        swiperContainer.classList.remove('hidden');
-    });
+    let projectSwiper = null;
+});
 
-    document.getElementById('fullscreen-close').addEventListener('click', e => {
-        console.log('happening');
-        swiperContainer.classList.add('hidden');
-    });
-
-    const swiper = new Swiper('#project-swiper', {
-        speed: 400,
-        spaceBetween: 100,
-        /* autoplay: {
-            delay: 5000,
-        }, */
-        pagination: {
-            el: ".swiper-pagination",
-        }
-    });
-
-    document.querySelector('#project-swiper-container .swiper-button-prev').addEventListener('click', e => {
-        swiper.slidePrev();
-    });
-
-    document.querySelector('#project-swiper-container .swiper-button-next').addEventListener('click', e => {
-        swiper.slideNext();
-    });
-
-    const testSwiper = new Swiper('#swiper-test', {
+function projectSwiperInit(){
+    projectSwiper = new Swiper('#swiper-test', {
         speed: 400,
         spaceBetween: 100,
     });
 
     document.querySelector('#swiper-test-controls .prev').addEventListener('click', e => {
-        testSwiper.slidePrev();
+        projectSwiper.slidePrev();
     });
 
     document.querySelector('#swiper-test-controls .next').addEventListener('click', e => {
-        testSwiper.slideNext();
+        projectSwiper.slideNext();
     });
-});
+}
 
 function getElementFromIdLink(idLink = ""){
     if(idLink.length < 2) return null;

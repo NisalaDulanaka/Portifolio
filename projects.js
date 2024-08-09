@@ -1,25 +1,13 @@
-const projectData = [
+const projectsData = [
     {
-        items: ['./assets/final exhi.mp4','./assets/images/projects/medicalink/design.png',
-            './assets/images/projects/medicalink/design (3).png','./assets/images/projects/medicalink/h2.png',
-            './assets/images/projects/medicalink/h3.png','./assets/images/projects/medicalink/design (2).png'
-        ],
         getContent: MedicaLinkContent,
         getOverview: MedicalinkOverview
     },
     {
-        items: ['./assets/final exhi.mp4','./assets/images/projects/medicalink/design.png',
-            './assets/images/projects/skillforce/ss2.PNG','./assets/images/projects/medicalink/h2.png',
-            './assets/images/projects/medicalink/h3.png','./assets/images/projects/medicalink/design (2).png'
-        ],
         getContent: CMSContent,
         getOverview: CMSOverview
     },
     {
-        items: ['./assets/final exhi.mp4','./assets/images/projects/skillforce/design (1).png',
-            './assets/images/projects/medicalink/design (3).png','./assets/images/projects/skillforce/design (2).png',
-            './assets/images/projects/skillforce/ss6.PNG','./assets/images/projects/skillforce/ss.PNG'
-        ],
         getContent: SkillForceContent,
         getOverview: SkillForceOverview
     }
@@ -28,34 +16,122 @@ const projectData = [
 function MedicaLinkContent() {
 
     return (
-        `<div
-            class="ms-[334px] p-4 w-fit h-[100%] grid grid-rows-12 grid-cols-[repeat(12,minmax(85px,_100px))] grid-flow-col gap-4 overview-tiles">
-            <div class="tile bg-blue-500 row-span-7 col-span-5">
-                <video src="./assets/final exhi.mp4" loop controls></video>
+        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+
+            <div class="swiper h-full" id="swiper-test">
+                <div class="swiper-wrapper h-full">
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/main.png" class="object-cover object-top"
+                            alt="project-asset">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/design (2).png" class="object-contain"
+                            alt="project-asset">
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-blue-500 row-span-5 col-span-4">
-                <img src="./assets/images/projects/medicalink/design.png" alt="project-asset">
+            <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10">
+                <div class="ms-8 mb-5 mt-auto flex items-center" id="swiper-test-controls">
+                    <span class="material-symbols-outlined cursor-pointer prev">
+                        arrow_back_ios
+                    </span>
+                    <span class="material-symbols-outlined cursor-pointer next">
+                        arrow_forward_ios
+                    </span>
+                    <div class="ms-2 flex items-center anime text-yellow-400">
+                        <span class="material-symbols-outlined cursor-default">
+                            arrow_forward_ios
+                        </span>
+                        <span class="material-symbols-outlined cursor-default">
+                            arrow_forward_ios
+                        </span>
+                        <span class="material-symbols-outlined cursor-default">
+                            arrow_forward_ios
+                        </span>
+                        <span class="ms-5">Explore</span>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-blue-500 row-span-5 col-span-2">
-                <img src="./assets/images/projects/medicalink/design (3).png" alt="project-asset">
+        </div>
+        <div class="slide bg-orange-500 col-span-4 row-span-8">
+            <img src="https://images.theconversation.com/files/373616/original/file-20201208-23-18tgbmo.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C667%2C667&q=45&auto=format&w=240&h=240&fit=crop"
+                class="object-cover object-top" alt="project-asset">
+            <div class="absolute h-full w-full top-0 left-0 bg-[#303cdf86] p-4 text-white flex flex-col">
+                <h1 class="text-2xl">01</h1>
+                <div class=" mt-auto">
+                    <h2 class="font-medium text-xl">THE LATEST HEALTHCARE <span
+                            class="text-yellow-400 font-bold">REVOLUTION</span> IN <span
+                            class="text-yellow-400 text-2xl font-bold">SRI LANKA</span></h2>
+                    <p class="mt-3 mb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero obcaecati tenetur
+                        quam, officiis saepe corporis veritatis molestiae sit voluptatem.
+                    </p>
+                </div>
             </div>
-            <div class="tile bg-blue-500 row-span-7 col-span-5">
-                <img src="./assets/images/projects/medicalink/h2.png" alt="project-asset">
+        </div>
+        <div class="slide bg-gradient-to-tr from-pink-500 to-indigo-500 col-span-4 row-span-8">
+            <div class="p-5">
+                <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
+                <h1 class="text-2xl font-bold">Technology Stack</h1>
+                <div class="mt-10 flex flex-wrap gap-x-6 gap-y-4 items-center">
+                    <span class="w-16">
+                        <img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png"
+                            alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-16">
+                        <img src="https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://img.icons8.com/?size=100&id=EzPCiQUqWWEa&format=png&color=000000" alt="">
+                    </span>
+                    <span class="w-14">
+                        <img src="https://v4.mui.com/static/logo.png" alt="">
+                    </span>
+                </div>
             </div>
-            <div class="tile bg-blue-500 row-span-5 col-span-4">
-                <img src="./assets/images/projects/medicalink/h3.png" alt="project-asset">
-            </div>
-            <div class="tile bg-blue-500 row-span-full col-span-2">
-                <img src="./assets/images/projects/medicalink/design (2).png" alt="project-asset">
+        </div>
+        <div class="slide bg-[#34365cf6] col-span-8 row-span-4">
+            <div class="p-8 text-white">
+                <h1 class="mb-1 text-[18px]">Overview</h1>
+                <div class="flex items-center gap-x-4 text-xs mb-5">
+                    <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
+                    <a href="#"
+                        class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                        Web Application
+                    </a>
+                    <a href="#"
+                        class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                        Mobile Application
+                    </a>
+                </div>
+                <p>
+                    MedicaLink is an online platform for managing electronic health records. It aims to
+                    replace
+                    Sri Lanka's paper-based healthcare systems,
+                    which often cause misdiagnoses and delays in patient care, by centralizing healthcare
+                    information for hospitals nationwide.
+                </p>
             </div>
         </div>`
     );
 }
 
-function MedicalinkOverview(fullScreen = false){
+function MedicalinkOverview(fullScreen = false) {
 
     return (
-        `<h1 class="text-xlfont-semibold ${fullScreen? 'mt-10' : ''}">MedicaLink
+        `<h1 class="text-xlfont-semibold ${fullScreen ? 'mt-10' : ''}">MedicaLink
             <span class="block md:inline text-[18px] md:text-xl">
                 <span class="hidden md:inline"> - </span>SOnline EHR System
             </span>
@@ -126,34 +202,137 @@ function MedicalinkOverview(fullScreen = false){
 function CMSContent() {
 
     return (
-        `<div
-            class="ms-[334px] p-4 w-fit h-[100%] grid grid-rows-12 grid-cols-[repeat(12,minmax(85px,_100px))] grid-flow-col gap-4 overview-tiles">
-            <div class="tile bg-yellow-500 row-span-7 col-span-5">
-                <video src="./assets/final exhi.mp4" loop controls></video>
+        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+
+                <div class="swiper h-full" id="swiper-test">
+
+                    <div class="swiper-wrapper h-full">
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/cms/main.png" class="object-cover object-top"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/cms/1.png" class="object-contain" alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/cms/2.png" class="object-contain" alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/cms/3.png" class="object-contain" alt="project-asset">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10">
+                    <div class="ms-8 mb-5 mt-auto flex items-center" id="swiper-test-controls">
+                        <span class="material-symbols-outlined cursor-pointer prev">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer next">
+                            arrow_forward_ios
+                        </span>
+                        <div class="ms-2 flex items-center anime text-yellow-400">
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="ms-5">Explore</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-yellow-500 row-span-5 col-span-4">
-                <img src="./assets/images/projects/medicalink/design.png" alt="project-asset">
+
+            <div class="slide bg-orange-500 col-span-4 row-span-8">
+                <img src="https://assets.weforum.org/article/image/responsive_big_webp_J3jUjzyyOxW4zWGs9ZMvpaRi8QjdQDb1x5adaI9wUpY.webp"
+                    class="object-cover object-center-top" alt="project-asset">
+
+                <div class="absolute h-full w-full top-0 left-0 bg-[#2092a386] p-4 text-white flex flex-col">
+                    <h1 class="text-2xl">01</h1>
+                    <div class=" mt-auto">
+                        <h2 class="font-medium text-xl">
+                            <span class="text-yellow-400 font-bold">Experience</span> the true <span
+                                class="text-yellow-400 font-bold">power</span> of a modern information management
+                            system.
+                        </h2>
+                        <p class="mt-3 mb-5">
+                            A feature rich solution for managing all aspects of a centre, built with modern technology.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-yellow-500 row-span-5 col-span-2">
-                <img src="./assets/images/projects/medicalink/design (3).png" alt="project-asset">
+
+            <div class="slide bg-gradient-to-tr from-[#30766d] to-[#ff4efc] col-span-4 row-span-8">
+
+                <div class="p-5">
+                    <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
+                    <h1 class="text-2xl font-bold">Technology Stack</h1>
+
+                    <div class="mt-10 flex flex-wrap gap-x-6 gap-y-4 items-center">
+                        <span class="w-16">
+                            <img src="https://img.icons8.com/?size=100&id=fAMVO_fuoOuC&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-16">
+                            <img src="https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=EzPCiQUqWWEa&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-44">
+                            <img src="assets/images/MOTIONS PHPLogo.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+
             </div>
-            <div class="tile bg-yellow-500 row-span-7 col-span-5">
-                <img src="./assets/images/projects/medicalink/h2.png" alt="project-asset">
-            </div>
-            <div class="tile bg-yellow-500 row-span-5 col-span-4">
-                <img src="./assets/images/projects/medicalink/h3.png" alt="project-asset">
-            </div>
-            <div class="tile bg-yellow-500 row-span-full col-span-2">
-                <img src="./assets/images/projects/medicalink/design (2).png" alt="project-asset">
-            </div>
-        </div>`
+
+            <div class="slide bg-[#344c5cf6] col-span-8 row-span-4">
+
+                <div class="p-8 text-white">
+                    <h1 class="mb-1 text-[18px]">Overview</h1>
+                    <div class="flex items-center gap-x-4 text-xs mb-5">
+                        <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                            Web Application
+                        </a>
+                    </div>
+                    <p>
+                        A center management system for the Vocational Training Authority of Sri Lanka. It
+                        manages
+                        student registration,
+                        Attendance marking, Assessment handling and Inventory handling of centres owned by the
+                        VTA.
+                    </p>
+                </div>
+
+            </div>`
     );
 }
 
-function CMSOverview(fullScreen = false){
+function CMSOverview(fullScreen = false) {
 
     return (
-        `<h1 class="text-xl font-semibold ${fullScreen? 'mt-10' : ''}">VTA CMS
+        `<h1 class="text-xl font-semibold ${fullScreen ? 'mt-10' : ''}">VTA CMS
             <span class="block md:inline text-[18px] md:text-xl">
                 <span class="hidden md:inline"> - </span>Centre Management System
             </span>
@@ -216,32 +395,134 @@ function CMSOverview(fullScreen = false){
 function SkillForceContent() {
 
     return (
-        `<div
-            class="ms-[334px] p-4 w-fit h-[100%] grid grid-rows-12 grid-cols-[repeat(12,minmax(85px,_100px))] grid-flow-col gap-4 overview-tiles">
-            <div class="tile bg-pink-500 row-span-7 col-span-5">
-                <video src="./assets/final exhi.mp4" loop controls></video>
+        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+
+                <div class="swiper h-full" id="swiper-test">
+
+                    <div class="swiper-wrapper h-full">
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/main.png" class="object-cover object-top"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/design (1).png" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/design (2).png" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/ss.PNG" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/ss2.PNG" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/ss4.PNG" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./assets/images/projects/skillforce/ss6.PNG" class="object-contain"
+                                alt="project-asset">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10">
+                    <div class="ms-8 mb-5 mt-auto flex items-center" id="swiper-test-controls">
+                        <span class="material-symbols-outlined cursor-pointer prev">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer next">
+                            arrow_forward_ios
+                        </span>
+                        <div class="ms-2 flex items-center anime text-yellow-400">
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="material-symbols-outlined cursor-default">
+                                arrow_forward_ios
+                            </span>
+                            <span class="ms-5">Explore</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-pink-500 row-span-5 col-span-2">
-                <img src="./assets/images/projects/skillforce/design (1).png" class="object-top"
+
+            <div class="slide bg-orange-500 col-span-4 row-span-8">
+                <img src="https://i.ytimg.com/vi/t892axrPj9A/maxresdefault.jpg" class="object-cover object-left-top"
                     alt="project-asset">
+
+                <div class="absolute h-full w-full top-0 left-0 bg-[#df303086] p-4 text-white flex flex-col">
+                    <h1 class="text-2xl">01</h1>
+                    <div class=" mt-auto">
+                        <h2 class="font-medium text-xl">DEVELOPED AND USED FOR THE DERENA <span
+                                class="text-yellow-400 font-bold">SKILL FORCE</span> PROGRAM</h2>
+                        <p class="mt-3 mb-5">
+                            Skill Force is an exhibition organized by Derena where students from
+                            various educational institutions get to showcase their bright ideas to a mass audience.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-pink-500 row-span-5 col-span-3">
-                <img src="./assets/images/projects/skillforce/ss2.PNG" class="object-left" alt="project-asset">
+
+            <div class="slide bg-gradient-to-tr from-[#FF4E50] to-[#F9D423] col-span-4 row-span-8">
+
+                <div class="p-5">
+                    <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
+                    <h1 class="text-2xl font-bold">Technology Stack</h1>
+
+                    <div class="mt-10 flex flex-wrap gap-x-6 gap-y-4 items-center">
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=ROMfFZ1tMhpk&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-14">
+                            <img src="https://img.icons8.com/?size=100&id=30461&format=png&color=000000" alt="">
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div class="tile bg-pink-500 row-span-full col-span-3">
-                <img src="./assets/images/projects/skillforce/design (2).png" alt="project-asset">
-            </div>
-            <div class="tile bg-pink-500 row-span-6 col-span-4">
-                <img src="./assets/images/projects/skillforce/ss6.PNG" alt="project-asset">
-            </div>
-            <div class="tile bg-pink-500 row-span-6 col-span-4">
-                <img src="./assets/images/projects/skillforce/ss.PNG" alt="project-asset">
-            </div>
-        </div>`
+
+            <div class="slide bg-[#5c3834f6] col-span-8 row-span-4">
+                <div class="p-8 text-white">
+                    <h1 class="mb-1 text-[18px]">Overview</h1>
+                    <div class="flex items-center gap-x-4 text-xs mb-5">
+                        <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                            Desktop Application
+                        </a>
+                    </div>
+                    <p>
+                        A student application management system for the Vocation
+                        Training Authority of Sri Lanka. It is used to manage application
+                        submitted by students for VTA courses. Completed the whole project
+                        in a week.
+                    </p>
+                </div>
+            </div>`
     );
 }
 
-function SkillForceOverview(fullScreen = false){
+function SkillForceOverview(fullScreen = false) {
 
     return (
         `<h1 class="text-xl font-semibold">Skill Force
