@@ -18,39 +18,152 @@
 
 <body class="bg-black relative">
 <!-- bg-[#0a3131] -->
-    <div class="hidden absolute bg-gray-900 top-0 left-0 w-full h-full z-50" id="project-overview-container">
+    <div class="show absolute bg-gray-900 top-0 left-0 w-full h-full z-50" id="project-overview-container">
         <div class="sticky top-0 h-[100vh] px-5 py-5">
             <button class="absolute top-0 right-0 z-10 text-white mt-4 me-4 close">
                 <span class="material-symbols-outlined text-[32px]">
                     cancel
                 </span>
             </button>
-            <div class="h-full rounded-xl overflow-hidden grid gap-2 grid-cols-[repeat(20,minmax(0,_1fr))] grid-rows-12 [&>.slide]:relative [&>.slide]:rounded-3xl [&>.slide]:overflow-hidden project-main">
+            <div class="h-full rounded-xl overflow-y-auto md:overflow-hidden 
+            grid gap-2 grid-cols-[repeat(20,minmax(0,_1fr))] md:grid-rows-12 
+            [&>.slide]:relative [&>.slide]:rounded-3xl [&>.slide]:overflow-hidden project-main">
                 
-                
+                <div class="slide bg-gray-800 col-span-full h-[370px] md:h-auto md:col-span-12 row-span-full">
+
+                    <div class="swiper h-full" id="swiper-test">
+                        <div class="swiper-wrapper h-full">
+                            <div class="swiper-slide relative">
+                                <div class="absolute bg-red-50 w-full h-full top-0 left-0">
+                                    <div class="relative h-full">
+                                        <img src="./assets/images/projects/medicalink/design (1).png" class="object-cover object-top" alt="overlay">
+                                        <div class="absolute top-1/2 left-1/2 z-20 translate-x-[-50%] bg-black h-[60px] w-[60px] rounded-full">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <video src="./assets/final exhi.mp4" class="object-contain object-center" alt="project-asset"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10 pointer-events-none">
+                        <div class="ms-8 mb-5 mt-auto flex items-center pointer-events-auto" id="swiper-test-controls">
+                            <span class="material-symbols-outlined cursor-pointer prev">
+                                arrow_back_ios
+                            </span>
+                            <span class="material-symbols-outlined cursor-pointer next">
+                                arrow_forward_ios
+                            </span>
+                            <div class="ms-2 flex items-center anime text-yellow-400">
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="material-symbols-outlined cursor-default">
+                                    arrow_forward_ios
+                                </span>
+                                <span class="ms-5">Explore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide bg-orange-500 row-start-4 col-span-full h-[450px] md:h-auto md:col-span-4 md:row-span-8">
+                    <img src="https://images.theconversation.com/files/373616/original/file-20201208-23-18tgbmo.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C667%2C667&q=45&auto=format&w=240&h=240&fit=crop"
+                        class="object-cover object-top" alt="project-asset">
+                    <div class="absolute h-full w-full top-0 left-0 bg-[#303cdf86] p-4 text-white flex flex-col">
+                        <h1 class="text-2xl">01</h1>
+                        <div class=" mt-auto">
+                            <h2 class="font-medium text-xl">THE LATEST HEALTHCARE <span
+                                    class="text-yellow-400 font-bold">REVOLUTION</span> IN <span
+                                    class="text-yellow-400 text-2xl font-bold">SRI LANKA</span></h2>
+                            <p class="mt-3 mb-5">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero obcaecati tenetur
+                                quam, officiis saepe corporis veritatis molestiae sit voluptatem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide bg-gradient-to-tr from-pink-500 to-indigo-500 row-start-6 col-span-full h-[320px] 
+                md:h-auto md:col-span-4 md:row-span-8">
+                    <div class="p-5 h-full sm:h-auto overflow-y-auto">
+                        <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
+                        <h1 class="text-2xl font-bold">Technology Stack</h1>
+                        <div class="mt-10 flex flex-wrap gap-x-6 gap-y-4 items-center">
+                            <span class="w-16">
+                                <img src="https://img.icons8.com/?size=100&id=123603&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png"
+                                    alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://img.icons8.com/?size=100&id=108784&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-16">
+                                <img src="https://img.icons8.com/?size=100&id=UFXRpPFebwa2&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://img.icons8.com/?size=100&id=EzPCiQUqWWEa&format=png&color=000000" alt="">
+                            </span>
+                            <span class="w-14">
+                                <img src="https://v4.mui.com/static/logo.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide bg-[#34365cf6] row-start-2 col-span-full h-[311px] md:h-auto md:col-span-8 md:row-span-4">
+                    <div class="p-8 text-white h-full sm:h-auto overflow-y-auto">
+                        <h1 class="mb-1 text-[18px]">Overview</h1>
+                        <div class="flex items-center gap-x-3 sm:gap-x-4 text-xs mb-5">
+                            <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
+                            <a href="#"
+                                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                                Web App<span class="hidden md:inline">lication</span>
+                            </a>
+                            <a href="#"
+                                class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-white">
+                                Mobile App<span class="hidden md:inline">lication</span>
+                            </a>
+                        </div>
+                        <p>
+                            MedicaLink is an online platform for managing electronic health records. It aims to
+                            replace
+                            Sri Lanka's paper-based healthcare systems,
+                            which often cause misdiagnoses and delays in patient care, by centralizing healthcare
+                            information for hospitals nationwide.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <div class="bg-black relative max-w-[1700px] mx-auto">
         <header class="absolute inset-x-0 top-0 z-40">
-            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav class="flex items-start md:items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
-                        <img class="h-8 w-auto" src="./assets/images/favicon.png"
+                        <img class="h-8 w-auto" src="./assets/images/favicon2.png"
                             alt="">
                     </a>
                 </div>
                 <div class="flex lg:hidden">
                     <button type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                        <span class="material-symbols-outlined">
+                            list
+                        </span>
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-16 lg:me-40" id="nav-links">
@@ -563,17 +676,9 @@
 
             <footer>
                 <div class="mt-10 py-10 md:px-8 lg:px-10">
-                    <div class="flex text-white mb-8 justify-between">
-                        <!-- <div class="flex-1">
-                            <h2 class="text-4xl">Thank you for visiting!</h2>
-                            <p class="mt-5">
-                                If you are a fellow Developer or Tech enthusiast, please feel free to
-                                contact me on social media or drop a connection on linkedin. I'm open to
-                                new opportunities and collaborations.
-                            </p>
-                        </div> -->
+                    <div class="flex text-white mb-8 justify-between gap-y-16 flex-col-reverse md:flex-row">
                         <div class="flex-initial">
-                            <div class="flex gap-4">
+                            <div class="flex justify-center md:justify-start gap-4">
                                 <img src="./assets/images/Logo bw.png" alt="logo" class="w-[60px]">
                                 <div>
                                     <h2 class="text-3xl">Nisala Dulanaka</h2>
@@ -581,18 +686,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-initial flex gap-x-32">
-                            <div>
+                        <div class="hidden md:flex flex-initial gap-x-32 gap-y-16 flex-col md:flex-row">
+                            <div class="hidden md:block">
                                 <h4 class="font-[700]">Useful Links</h4>
-                                <h4>About Me</h4>
-                                <h4>My Projects</h4>
-                                <h4>Contact Me</h4>
+                                <div class="flex md:flex-col gap-x-10">
+                                    <h4>About Me</h4>
+                                    <h4>My Projects</h4>
+                                    <h4>Contact Me</h4>
+                                </div>
                             </div>
-                            <div>
+                            <div class="hidden md:block">
                                 <h4>Thank You! for visiting</h4>
                                 <h4>my portifolio website</h4>
                             </div>
-                            <div>
+                            <div class="hidden md:block">
                                 <h4>If you are a fellow Developer or Tech enthusiast,</h4>
                                 <h4>please feel free to contact me on social media</h4>
                                 <h4>or drop a connection on linkedin</h4>

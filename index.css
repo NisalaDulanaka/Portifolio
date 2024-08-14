@@ -337,9 +337,19 @@
 /* Project swiper end */
 
 /* Project main start */
-.project-main .slide img{
+.project-main::-webkit-scrollbar{
+    width: 0px;
+}
+
+.project-main .slide img,.project-main .slide video{
     width: 100% !important;
     height: 100%;
+}
+
+@media (max-width: 376px){
+    .project-main .slide{
+        overflow-y: auto;
+    }
 }
 
 #swiper-test-controls .anime span{

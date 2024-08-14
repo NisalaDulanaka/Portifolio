@@ -16,7 +16,7 @@ const projectsData = [
 function MedicaLinkContent() {
 
     return (
-        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+        `<div class="slide bg-gray-800 col-span-full h-[370px] md:h-auto md:col-span-12 row-span-full">
 
             <div class="swiper h-full" id="swiper-test">
                 <div class="swiper-wrapper h-full">
@@ -26,6 +26,10 @@ function MedicaLinkContent() {
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/projects/medicalink/design (2).png" class="object-contain"
+                            alt="project-asset">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/design (3).png" class="object-contain"
                             alt="project-asset">
                     </div>
                 </div>
@@ -53,7 +57,7 @@ function MedicaLinkContent() {
                 </div>
             </div>
         </div>
-        <div class="slide bg-orange-500 col-span-4 row-span-8">
+        <div class="slide bg-orange-500 row-start-4 col-span-full h-[450px] md:h-auto md:col-span-4 md:row-span-8">
             <img src="https://images.theconversation.com/files/373616/original/file-20201208-23-18tgbmo.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C667%2C667&q=45&auto=format&w=240&h=240&fit=crop"
                 class="object-cover object-top" alt="project-asset">
             <div class="absolute h-full w-full top-0 left-0 bg-[#303cdf86] p-4 text-white flex flex-col">
@@ -69,8 +73,9 @@ function MedicaLinkContent() {
                 </div>
             </div>
         </div>
-        <div class="slide bg-gradient-to-tr from-pink-500 to-indigo-500 col-span-4 row-span-8">
-            <div class="p-5">
+        <div class="slide bg-gradient-to-tr from-pink-500 to-indigo-500 row-start-6 col-span-full h-[320px] 
+            md:h-auto md:col-span-4 md:row-span-8">
+            <div class="p-5 h-full sm:h-auto overflow-y-auto">
                 <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
                 <h1 class="text-2xl font-bold">Technology Stack</h1>
                 <div class="mt-10 flex flex-wrap gap-x-6 gap-y-4 items-center">
@@ -102,8 +107,8 @@ function MedicaLinkContent() {
                 </div>
             </div>
         </div>
-        <div class="slide bg-[#34365cf6] col-span-8 row-span-4">
-            <div class="p-8 text-white">
+        <div class="slide bg-[#34365cf6] row-start-2 col-span-full h-[311px] md:h-auto md:col-span-8 md:row-span-4">
+            <div class="p-8 text-white h-full sm:h-auto overflow-y-auto">
                 <h1 class="mb-1 text-[18px]">Overview</h1>
                 <div class="flex items-center gap-x-4 text-xs mb-5">
                     <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
@@ -202,7 +207,7 @@ function MedicalinkOverview(fullScreen = false) {
 function CMSContent() {
 
     return (
-        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+        `<div class="slide bg-gray-800 col-span-full h-[370px] md:h-auto md:col-span-12 row-span-full">
 
                 <div class="swiper h-full" id="swiper-test">
 
@@ -253,7 +258,7 @@ function CMSContent() {
                 </div>
             </div>
 
-            <div class="slide bg-orange-500 col-span-4 row-span-8">
+            <div class="slide bg-orange-500 row-start-4 col-span-full h-[450px] md:h-auto md:col-span-4 md:row-span-8">
                 <img src="https://assets.weforum.org/article/image/responsive_big_webp_J3jUjzyyOxW4zWGs9ZMvpaRi8QjdQDb1x5adaI9wUpY.webp"
                     class="object-cover object-center-top" alt="project-asset">
 
@@ -272,9 +277,10 @@ function CMSContent() {
                 </div>
             </div>
 
-            <div class="slide bg-gradient-to-tr from-[#30766d] to-[#ff4efc] col-span-4 row-span-8">
+            <div class="slide bg-gradient-to-tr from-[#30766d] to-[#ff4efc] row-start-6 col-span-full h-[320px] 
+            md:h-auto md:col-span-4 md:row-span-8">
 
-                <div class="p-5">
+                <div class="p-5 h-full sm:h-auto overflow-y-auto">
                     <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
                     <h1 class="text-2xl font-bold">Technology Stack</h1>
 
@@ -305,9 +311,9 @@ function CMSContent() {
 
             </div>
 
-            <div class="slide bg-[#344c5cf6] col-span-8 row-span-4">
+            <div class="slide bg-[#344c5cf6] row-start-2 col-span-full h-[311px] md:h-auto md:col-span-8 md:row-span-4">
 
-                <div class="p-8 text-white">
+                <div class="p-8 text-white h-full sm:h-auto overflow-y-auto">
                     <h1 class="mb-1 text-[18px]">Overview</h1>
                     <div class="flex items-center gap-x-4 text-xs mb-5">
                         <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>
@@ -395,7 +401,7 @@ function CMSOverview(fullScreen = false) {
 function SkillForceContent() {
 
     return (
-        `<div class="slide bg-gray-800 col-span-12 row-span-full">
+        `<div class="slide bg-gray-800 col-span-full h-[370px] md:h-auto md:col-span-12 row-span-full">
 
                 <div class="swiper h-full" id="swiper-test">
 
@@ -464,7 +470,7 @@ function SkillForceContent() {
                 </div>
             </div>
 
-            <div class="slide bg-orange-500 col-span-4 row-span-8">
+            <div class="slide bg-orange-500 row-start-4 col-span-full h-[450px] md:h-auto md:col-span-4 md:row-span-8">
                 <img src="https://i.ytimg.com/vi/t892axrPj9A/maxresdefault.jpg" class="object-cover object-left-top"
                     alt="project-asset">
 
@@ -481,9 +487,10 @@ function SkillForceContent() {
                 </div>
             </div>
 
-            <div class="slide bg-gradient-to-tr from-[#FF4E50] to-[#F9D423] col-span-4 row-span-8">
+            <div class="slide bg-gradient-to-tr from-[#FF4E50] to-[#F9D423] row-start-6 col-span-full h-[320px] 
+            md:h-auto md:col-span-4 md:row-span-8">
 
-                <div class="p-5">
+                <div class="p-5 h-full sm:h-auto overflow-y-auto">
                     <h1 class="text-lg font-semibold mt-5">Get to know the</h1>
                     <h1 class="text-2xl font-bold">Technology Stack</h1>
 
@@ -501,8 +508,8 @@ function SkillForceContent() {
                 </div>
             </div>
 
-            <div class="slide bg-[#5c3834f6] col-span-8 row-span-4">
-                <div class="p-8 text-white">
+            <div class="slide bg-[#5c3834f6] row-start-2 col-span-full h-[311px] md:h-auto md:col-span-8 md:row-span-4">
+                <div class="p-8 text-white h-full sm:h-auto overflow-y-auto">
                     <h1 class="mb-1 text-[18px]">Overview</h1>
                     <div class="flex items-center gap-x-4 text-xs mb-5">
                         <time datetime="2024-06-20" class="text-blue-50 text-[14px]">June 20, 2024</time>

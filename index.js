@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var options = {
-        strings: ["Hello, I'm a web developer.", "I love coding.", "Welcome to my portfolio!"],
+        strings: ["Hello, I'm a software developer.", "I love coding.", "Welcome to my portfolio!"],
         typeSpeed: 45,
         backSpeed: 25,
         startDelay: 0,
@@ -72,9 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             projectContainerMain.innerHTML = '';
         }, 400);
     });
-
-    //Project fullscreen swiper
-    let projectSwiper = null;
 });
 
 function projectSwiperInit(){
