@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
           element.scrollIntoView({
             behavior: 'smooth'
           });
+          
+          changeActiveLink(anchor);
         });
     });
 
@@ -42,11 +44,35 @@ document.addEventListener('DOMContentLoaded', function() {
         collapsed = !collapsed;
     });
 
+    //Mobile Header
+    const mobileNavClose = document.getElementById('mobile-nav-close');
+    const mobileNavOpen = document.getElementById('mobile-nav-open');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileNavClose.addEventListener('click', e => {
+        mobileNav.classList.remove('show');
+    });
+
+    mobileNavOpen.addEventListener('click', e => {
+        mobileNav.classList.add('show');
+    });
+
     //Project animations
     const projectOverviewContainer = document.querySelector('#project-overview-container');
     const projectContainerMain = projectOverviewContainer.querySelector('.project-main');
     const projectOverviewCloseBtn = projectOverviewContainer.querySelector('.close');
     const projects = document.querySelectorAll('#projects .project');
+
+    projectContainerMain.querySelectorAll('.swiper-slide .play-btn').forEach( (playBtn) => {
+
+        const playResource = playBtn.parentElement.querySelector('video');
+        if(playResource == null) return;
+
+        playBtn.addEventListener('click',() => {
+            playBtn.classList.add('hidden');
+            playResource.play();
+        });
+    });
 
     for (let i =0; i < projects.length; i++) {
         const project = projects[i];
@@ -62,6 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 projectOverviewContainer.classList.add('show');
             }, 50);
+
+            projectContainerMain.querySelectorAll('.swiper-slide .play-btn').forEach( (playBtn) => {
+
+                const playResource = playBtn.parentElement.querySelector('video');
+                if(playResource == null) return;
+
+                playBtn.addEventListener('click',() => {
+                    playBtn.classList.add('hidden');
+                    playResource.play();
+                })
+            });
+
         });
     }
 
@@ -78,6 +116,10 @@ function projectSwiperInit(){
     projectSwiper = new Swiper('#swiper-test', {
         speed: 400,
         spaceBetween: 100,
+        pagination: {
+            el: '.swiper-pagin',
+            type: 'bullets',
+        }
     });
 
     document.querySelector('#swiper-test-controls .prev').addEventListener('click', e => {
@@ -103,4 +145,13 @@ function getElementFromIdLink(idLink = ""){
     }
 
     return el;
+}
+
+function changeActiveLink(link){
+    let activeLinks = document.querySelectorAll('a.active');
+    activeLinks.forEach(activeLink => {
+        activeLink.classList.remove('active');
+    });
+
+    link.classList.add('active');
 }

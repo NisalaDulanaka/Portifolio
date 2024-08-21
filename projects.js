@@ -24,6 +24,22 @@ function MedicaLinkContent() {
                         <img src="./assets/images/projects/medicalink/main.png" class="object-cover object-top"
                             alt="project-asset">
                     </div>
+                    <div class="swiper-slide relative">
+                        <div class="play-btn absolute bg-red-50 w-full h-full top-0 left-0 z-[2]">
+                            <div class="relative h-full">
+                                <img src="./assets/images/projects/medicalink/design (1).png" class="object-cover object-top" alt="overlay">
+                                
+                                <div class="absolute bg-[radial-gradient(circle,_#00000064,_#0000004b,_#00000013)] top-0 left-0 flex justify-center items-center w-full h-full">
+                                    <div class="play relative overflow-hidden flex justify-center items-center text-[#ffffff] bg-[#9476dba1] border-4 border-[#ffffff93] hover:bg-transparent cursor-pointer rounded-full before:rounded-full after:rounded-full">
+                                        <span class="material-symbols-outlined text-[80px] z-10">
+                                            play_arrow
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <video src="./assets/final exhi.mp4" class="object-contain object-center" alt="project-asset" controls></video>
+                    </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/projects/medicalink/design (2).png" class="object-contain"
                             alt="project-asset">
@@ -32,10 +48,26 @@ function MedicaLinkContent() {
                         <img src="./assets/images/projects/medicalink/design (3).png" class="object-contain"
                             alt="project-asset">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/h3.png" class="object-contain"
+                            alt="project-asset">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/h1.png" class="object-contain"
+                            alt="project-asset">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/h4.png" class="object-contain"
+                            alt="project-asset">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/projects/medicalink/h2.png" class="object-contain"
+                            alt="project-asset">
+                    </div>
                 </div>
             </div>
-            <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col z-10">
-                <div class="ms-8 mb-5 mt-auto flex items-center" id="swiper-test-controls">
+            <div class="absolute h-full w-full top-0 left-0 p-4 text-white flex items-center z-10 pointer-events-none">
+                <div class="ms-8 mb-5 mt-auto flex items-center select-none pointer-events-auto" id="swiper-test-controls">
                     <span class="material-symbols-outlined cursor-pointer prev">
                         arrow_back_ios
                     </span>
@@ -55,20 +87,22 @@ function MedicaLinkContent() {
                         <span class="ms-5">Explore</span>
                     </div>
                 </div>
+                <div class="ms-auto me-8 mb-5 mt-auto flex items-center !w-fit swiper-pagin">
+                </div>
             </div>
         </div>
         <div class="slide bg-orange-500 row-start-4 col-span-full h-[450px] md:h-auto md:col-span-4 md:row-span-8">
             <img src="https://images.theconversation.com/files/373616/original/file-20201208-23-18tgbmo.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C667%2C667&q=45&auto=format&w=240&h=240&fit=crop"
                 class="object-cover object-top" alt="project-asset">
-            <div class="absolute h-full w-full top-0 left-0 bg-[#303cdf86] p-4 text-white flex flex-col">
+            <div class="absolute h-full w-full top-0 left-0 bg-gradient-to-t from-[#303cdfe4] to-[#303cdf86] p-4 text-white flex flex-col">
                 <h1 class="text-2xl">01</h1>
                 <div class=" mt-auto">
-                    <h2 class="font-medium text-xl">THE LATEST HEALTHCARE <span
-                            class="text-yellow-400 font-bold">REVOLUTION</span> IN <span
-                            class="text-yellow-400 text-2xl font-bold">SRI LANKA</span></h2>
-                    <p class="mt-3 mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vero obcaecati tenetur
-                        quam, officiis saepe corporis veritatis molestiae sit voluptatem.
+                    <h2 class="font-medium text-xl mb-4">
+                        Won <span class="text-[#fffb21] font-bold">1<sup>st</sup> place</span> at the IIT Infoschol Program as the "<span class="text-[#fffb21] font-bold">Best Project Pitch</span>"
+                    </h2>
+                    <p class="mt-5 mb-5">
+                        Won 1<sup>st</sup> place out of 10 projects at the IIT Induction program and got selected for the final round of the 
+                        IIT Cutting Edge tournament out of 40+ projects.
                     </p>
                 </div>
             </div>
@@ -503,6 +537,9 @@ function SkillForceContent() {
                         </span>
                         <span class="w-14">
                             <img src="https://img.icons8.com/?size=100&id=30461&format=png&color=000000" alt="">
+                        </span>
+                        <span class="w-28">
+                            <img src="https://gradle.com/wp-content/uploads/2023/09/LOGO-GRADLE-HZ_RGB.svg" alt="">
                         </span>
                     </div>
                 </div>
